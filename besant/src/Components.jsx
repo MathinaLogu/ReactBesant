@@ -33,15 +33,25 @@ export default class ClassComponents extends Component {
         }
     }
 
+increment (){
+  this.setState ({
+    count : this.state.count+1
+  })
+}
 
+decrement (){
+  this.setState ({
+    count : this.state.count-1
+  })
+}
 
 
   render() {
     return (
       <div>
         <h1>{this.state.count}</h1>
-        {/* <button onClick={() => this.setState(this.state.count+1)}>Incre</button>
-        <button onClick={() => this.setState(this.state.count-1)}>Decre</button> */}
+        <button onClick={() => this.increment()}>Incre</button>
+        <button onClick={() => this.decrement()}>Decre</button>
 
       </div>
     )
